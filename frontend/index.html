@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>lista useri:</h1>
+  <div id="app">
+    <div id="loader"></div>
+    <table id="users">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+
+    <button id="add-user-btn">add user</button>
+  </div>
+
+  <dialog id="add-user-dialog">
+    <form id="add-user-form">
+      <label for="username">username:</label>
+      <input type="text" id="username">
+      <label for="username">email:</label>
+      <input type="email" id="email">
+      <label for="password">password:</label>
+      <input type="password" id="password">
+
+      <button id="close-dialog-btn">cancel</button>
+      <button type="submit" id="perform-save-btn">add user</button>
+    </form>
+
+    <div id="error">
+      <ul></ul>
+    </div>
+  </dialog>
+
+
+  <script src="js/getUsers.js"></script>
+  <script src="js/addUser.js"></script>
+  <script>
+    getUsers();
+  </script>
+</body>
+</html>

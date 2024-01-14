@@ -1,0 +1,58 @@
+div#app {
+  display: grid;
+  place-items: center;
+}
+table#users {
+  display: none;
+  border-collapse: collapse;
+  border: thin solid black;
+  width: 75vw;
+}
+
+th, td {
+  padding: 5px;
+  border: thin solid black;
+}
+
+#loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+form#add-user-form {
+  margin: 2em 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  border: thin solid black;
+  padding: 5px;
+}
+
+form#add-user-form button {
+  /* fill both grid columns*/
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+label {
+  font-weight: bold;
+  text-align: right;
+}
+
+#add-user-btn {
+  margin: 2em 0;
+}
+
+#error {
+  color: red;
+}
